@@ -16,7 +16,7 @@ def load_data():
     work_path = os.path.join(base_path, 'seoul_work_data_updated.csv')
     
     # 카페 데이터 로드
-    df = pd.read_csv(cafe_path, encoding='cp949', low_memory=False)
+    df = pd.read_csv("data_2/cafe_data_merge.csv")
     
     # 종사자 데이터 로드 및 전처리
     work_df = pd.read_csv(work_path, encoding='cp949')
@@ -143,3 +143,4 @@ try:
 except Exception as e:
     st.error(f"오류가 발생했습니다: {e}")
     st.info("데이터 파일이 올바른 위치에 있는지, 인코딩이 cp949인지 확인해 주세요.")
+
